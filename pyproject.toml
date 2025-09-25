@@ -1,0 +1,43 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "aws-kgraph"
+version = "0.1.0"
+description = "AWS_KGraph - AWS Documentation Knowledge Graph with AI-powered querying"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+openai = "^1.0.0"
+faiss-cpu = "^1.7.0"
+numpy = "^1.24.0"
+pandas = "^2.0.0"
+tqdm = "^4.65.0"
+tiktoken = "^0.5.0"
+aiohttp = "^3.8.0"
+markdownify = "^0.11.0"
+typer = {extras = ["all"], version = "^0.9.0"}
+rich = "^13.0.0"
+async-timeout = "^4.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0.0"
+black = "^23.0.0"
+isort = "^5.12.0"
+
+[tool.poetry.scripts]
+aws-kgraph = "src.AWS_KGraph:main"
+setup = "src.setup_pipeline:main"
+query = "src.query_interface:interactive_main"
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
+line_length = 100
