@@ -83,13 +83,11 @@ Ensure you have Python 3.9+ and Poetry installed.
 ## TO-DO
 
 - [ ] Test poetry build process
-- [ ] Add project repository URL
+- [ ] Add URL links to access docs
 - [ ] Implement hybrid search (semantic + keyword)
 - [ ] Add support for other embedding providers
-- [ ] Create web interface
-- [ ] Add automated testing suite
+- [ ] Add CICD for tests and build
 - [ ] Implement incremental index updates
-- [ ] Add document filtering by date/service
 
 ## License
 
